@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eff2f9">
+  <title>门店内容 · 对比弹窗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button class="reopen" hidden>重新查看</button>
+  <div class="modal-space">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description">
+      <button class="close" aria-label="关闭弹窗"><img src="assets/close.svg" width="12" height="12" alt=""></button>
+      <div class="comparison" role="slider" tabindex="0" aria-label="外显小图：拖动查看补充内容前后对比" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="有内容区域 0%">
+        <div class="scene">
+          <img class="before" src="assets/外壳.png" width="319" height="240.68" alt="补充前，门店缺少外显小图" draggable="false">
+          <img class="after" src="assets/外壳-1.png" width="319" height="240.68" alt="补充后，展示完整的门店外显小图" draggable="false">
+          <div class="divider" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="comparison-tabs" role="tablist" aria-label="门店内容对比类型">
+        <span class="tab-highlight" aria-hidden="true"></span>
+        <button id="tab-external" role="tab" aria-selected="true" tabindex="0" data-slide="0">外显小图</button>
+        <button id="tab-header" role="tab" aria-selected="false" tabindex="-1" data-slide="1">头图</button>
+        <button id="tab-album" role="tab" aria-selected="false" tabindex="-1" data-slide="2">相册</button>
+        <button id="tab-dishes" role="tab" aria-selected="false" tabindex="-1" data-slide="3">推荐菜</button>
+      </div>
+      <h1 id="modal-title">补充3项门店内容<br>曝光预计可提<span>30%</span></h1>
+      <p id="modal-description">当前曝光率仅5%，相比同行低了17%</p>
+      <button class="primary">AI助力，补的又快又好</button>
+      <div class="home-indicator" aria-hidden="true"></div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+:root {
+  font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, "Microsoft YaHei", sans-serif;
+  color: rgba(1, 2, 4, .94);
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100svh; display: grid; place-items: center; background: #e3e5e9; }
+button { border: 0; padding: 0; font: inherit; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+[hidden] { display: none !important; }
+.modal-space { width: 375px; height: 571px; position: relative; }
+.modal {
+  position: relative; width: 375px; height: 571px; overflow: hidden;
+  border-radius: 12px 12px 0 0;
+  background: #f5f6f9 url("assets/modal-background.png") center / 100% 100% no-repeat;
+  transform-origin: top left;
+}
+.close { position: absolute; z-index: 3; top: 8px; right: 8px; width: 36px; height: 36px; display: grid; place-items: center; background: transparent; }
+.close img { opacity: .57; }
+.comparison {
+  --split: 100%;
+  position: absolute; left: 27.5px; top: 63px; width: 319px; height: 240.68px;
+  border-radius: 20px 20px 0 0; overflow: hidden; touch-action: none; cursor: ew-resize;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 80%, transparent 100%);
+}
+.scene { position: absolute; inset: 0; background: #fff; will-change: transform; }
+.scene img { position: absolute; inset: 0; display: block; width: 319px; height: 240.68px; object-fit: fill; user-select: none; pointer-events: none; }
+.scene .after { clip-path: inset(0 0 0 var(--split)); }
+.divider { position: absolute; z-index: 1; left: var(--split); top: 0; bottom: 0; width: 1.5px; transform: translateX(-.75px); background: linear-gradient(180deg, #eff7fb, #b9d8e9 65%, #dbe9f4); box-shadow: 0 0 1px rgba(121,172,201,.1); pointer-events: none; }
+.comparison-tabs { position: absolute; z-index: 2; left: 73.5px; top: 266.5px; display: flex; width: 228px; height: 30px; border-radius: 24px; background: transparent; }
+.comparison-tabs button { position: relative; z-index: 1; flex: none; padding: 5px 12px; height: 30px; border-radius: 120px; background: transparent; font-size: 12px; line-height: 20px; font-weight: 400; white-space: nowrap; color: rgba(1,5,19,.56); transition: color 180ms ease; }
+.comparison-tabs button[aria-selected="true"] { color: rgba(1,2,4,.94); }
+.tab-highlight { position: absolute; left: 0; top: 0; width: var(--tab-width, 72px); height: 30px; border-radius: 120px; background: rgba(0,0,0,.03); box-shadow: inset 0 0 0 .5px rgba(0,0,0,.06); transform: translateX(var(--tab-left, 0px)); transition: transform 240ms ease, width 240ms ease; }
+@media (prefers-reduced-motion: reduce) { .tab-highlight, .comparison-tabs button { transition: none; } }
+h1 { position: absolute; left: 24px; top: 328px; margin: 0; font-size: 28px; line-height: 44px; font-weight: 600; letter-spacing: 0; white-space: nowrap; }
+h1 span { color: #0088ff; }
+p { position: absolute; left: 24px; top: 424px; margin: 0; font-size: 14px; font-weight: 400; line-height: 21px; color: #96999e; white-space: nowrap; }
+.primary { position: absolute; left: 20px; top: 473px; width: 335px; height: 48px; border-radius: 25px; background: #3778ff; color: #fff; font-size: 18px; line-height: 27px; font-weight: 500; transition: filter 150ms, transform 150ms; }
+.primary:active { filter: brightness(.95); transform: scale(.985); }
+.home-indicator { position: absolute; left: 121px; bottom: 9px; width: 134px; height: 5px; border-radius: 3px; background: #33383e; }
+.reopen { padding: 12px 24px; background: #3778ff; color: #fff; border-radius: 24px; }
+button:focus-visible { outline: 2px solid #0088ff; outline-offset: 3px; }
+.comparison:focus-visible { outline: 2px solid #0088ff; outline-offset: -3px; }
+@media (max-width: 420px) { body { background: #b2b2b2; align-items: end; } }
