@@ -12,16 +12,6 @@
   let transition = null;
   const space = document.querySelector('.modal-space');
   const modal = document.querySelector('.modal');
-  const blurBand = document.querySelector('.comparison-blur');
-  const blurRows = document.createDocumentFragment();
-  for (let row = 0; row < 66; row += 1) {
-    const strip = document.createElement('span');
-    strip.className = 'comparison-blur-step';
-    strip.style.top = `${row}px`;
-    strip.style.setProperty('--blur-radius', `${(row / 65 * 4).toFixed(3)}px`);
-    blurRows.append(strip);
-  }
-  blurBand.append(blurRows);
   const reopen = document.querySelector('.reopen');
   const tablist = document.querySelector('.comparison-tabs');
   const tabs = [...tablist.querySelectorAll('[role="tab"]')];
