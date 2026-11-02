@@ -5,7 +5,14 @@
     { name: '门店相册', before: 'Frame 2147242661.png', after: 'Frame 2147242662.png' },
     { name: '推荐菜', before: 'Frame 2147242660.png', after: 'Frame 2147240232.png' },
   ];
+  const captions = [
+    '“醉月酒吧”补充店内实拍后曝光量提升18%',
+    '“东北大烧烤”补充招牌菜图片后曝光量提升23%',
+    '“舒养生活馆”补充服务项目介绍后曝光量提升16%',
+    '“花月婚礼策划”补充真实案例后曝光量提升31%',
+  ];
   const slider = document.querySelector('.comparison');
+  const caption = document.querySelector('.comparison-caption');
   let scene = document.querySelector('.scene');
   let before = scene.querySelector('.before');
   let after = scene.querySelector('.after');
@@ -36,6 +43,7 @@
   function showPair(next) {
     index = next;
     const pair = pairs[index];
+    caption.textContent = captions[index];
     before.src = imageUrl(pair.before); after.src = imageUrl(pair.after);
     before.alt = `补充前，门店缺少${pair.name}`;
     after.alt = `补充后，展示完整的${pair.name}`;

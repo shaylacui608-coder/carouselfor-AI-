@@ -21,6 +21,7 @@ button { border: 0; padding: 0; font: inherit; cursor: pointer; -webkit-tap-high
 }
 .close { position: absolute; z-index: 3; top: 8px; right: 8px; width: 36px; height: 36px; display: grid; place-items: center; background: transparent; }
 .close img { opacity: .57; }
+.comparison-caption { position: absolute; z-index: 2; top: 31px; left: 16px; right: 16px; height: 18px; margin: 0; overflow: hidden; color: rgba(0,13,33,.4); font-size: 12px; font-weight: 400; line-height: 18px; text-align: center; text-overflow: ellipsis; white-space: nowrap; }
 .comparison {
   --split: 100%;
   position: absolute; z-index: 1; left: 27.5px; top: 63px; width: 319px; height: 240.68px;
