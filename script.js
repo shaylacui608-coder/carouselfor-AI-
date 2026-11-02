@@ -14,7 +14,7 @@
   const modal = document.querySelector('.modal');
   const reopen = document.querySelector('.reopen');
   const tablist = document.querySelector('.comparison-tabs');
-  const tabs = [...tablist.querySelectorAll('[role="tab"]')];
+  const tabs = tablist ? [...tablist.querySelectorAll('[role="tab"]')] : [];
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const params = new URLSearchParams(location.search);
   let index = Math.max(0, Math.min(3, Number(params.get('slide')) || 0));
@@ -44,6 +44,7 @@
     syncTabs(index);
   }
   function syncTabs(selected) {
+    if (!tablist) return;
     tabs.forEach((tab, i) => {
       tab.setAttribute('aria-selected', String(i === selected));
       tab.tabIndex = i === selected ? 0 : -1;
