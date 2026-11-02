@@ -13,6 +13,7 @@
   ];
   const slider = document.querySelector('.comparison');
   const caption = document.querySelector('.comparison-caption');
+  const pagination = document.querySelector('.carousel-pagination');
   let scene = document.querySelector('.scene');
   let before = scene.querySelector('.before');
   let after = scene.querySelector('.after');
@@ -44,6 +45,7 @@
     index = next;
     const pair = pairs[index];
     caption.textContent = captions[index];
+    [...pagination.children].forEach((dot, i) => dot.classList.toggle('is-active', i === index));
     before.src = imageUrl(pair.before); after.src = imageUrl(pair.after);
     before.alt = `补充前，门店缺少${pair.name}`;
     after.alt = `补充后，展示完整的${pair.name}`;
