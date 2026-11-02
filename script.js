@@ -6,10 +6,10 @@
     { name: '推荐菜', before: 'Frame 2147242660.png', after: 'Frame 2147240232.png' },
   ];
   const captions = [
-    '“醉月酒吧”补充店内实拍后曝光量提升18%',
-    '“东北大烧烤”补充招牌菜图片后曝光量提升23%',
-    '“舒养生活馆”补充服务项目介绍后曝光量提升16%',
-    '“花月婚礼策划”补充真实案例后曝光量提升31%',
+    '“舒养生活馆”补充外显小图后曝光量提升16%',
+    '“醉月酒吧”补充头图后曝光量提升18%',
+    '“花月婚礼策划”补充实拍案例后曝光量提升31%',
+    '“东北大烧烤”补充推荐菜后曝光量提升23%',
   ];
   const slider = document.querySelector('.comparison');
   const caption = document.querySelector('.comparison-caption');
