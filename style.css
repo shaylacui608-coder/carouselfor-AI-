@@ -24,7 +24,7 @@ button { border: 0; padding: 0; font: inherit; cursor: pointer; -webkit-tap-high
 .comparison {
   --split: 100%;
   position: absolute; z-index: 1; left: 27.5px; top: 63px; width: 319px; height: 240.68px;
-  border-radius: 20px 20px 0 0; overflow: hidden; touch-action: none; cursor: ew-resize;
+  border-radius: 32px 32px 0 0; overflow: hidden; touch-action: none; cursor: ew-resize;
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 80%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 0%, #000 80%, transparent 100%);
 }
