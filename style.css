@@ -12,7 +12,11 @@ button { border: 0; padding: 0; font: inherit; cursor: pointer; -webkit-tap-high
 .modal {
   position: relative; width: 375px; height: 571px; overflow: hidden;
   border-radius: 12px 12px 0 0;
-  background: #f5f6f9 url("assets/modal-background.png") center / 100% 100% no-repeat;
+  background-color: #F5F6F9;
+  background-image: url("assets/modal-background-layer.png");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   transform-origin: top left;
 }
 .close { position: absolute; z-index: 3; top: 8px; right: 8px; width: 36px; height: 36px; display: grid; place-items: center; background: transparent; }
@@ -28,7 +32,6 @@ button { border: 0; padding: 0; font: inherit; cursor: pointer; -webkit-tap-high
 .scene img { position: absolute; inset: 0; display: block; width: 319px; height: 240.68px; object-fit: fill; user-select: none; pointer-events: none; }
 .scene .after { clip-path: inset(0 0 0 var(--split)); }
 .divider { position: absolute; z-index: 1; left: var(--split); top: 0; bottom: 0; width: 1.5px; transform: translateX(-.75px); background: linear-gradient(180deg, #eff7fb, #b9d8e9 65%, #dbe9f4); box-shadow: 0 0 1px rgba(121,172,201,.1); pointer-events: none; }
-.comparison-blur { position: absolute; z-index: 2; left: 0; top: 248.5px; width: 375px; height: 66px; pointer-events: none; background: transparent; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.02) 12%, rgba(0,0,0,.08) 28%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.42) 72%, rgba(0,0,0,.72) 90%, #000 100%); mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.02) 12%, rgba(0,0,0,.08) 28%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.42) 72%, rgba(0,0,0,.72) 90%, #000 100%); }
 .comparison-tabs { position: absolute; z-index: 3; left: 73.5px; top: 266.5px; display: flex; width: 228px; height: 30px; border-radius: 24px; background: transparent; }
 .comparison-tabs button { position: relative; z-index: 2; flex: none; padding: 5px 12px; height: 30px; border-radius: 120px; background: transparent; font-size: 12px; line-height: 20px; font-weight: 400; white-space: nowrap; color: rgba(1,5,19,.56); transition: color 180ms ease; }
 .comparison-tabs button[aria-selected="true"] { color: rgba(1,2,4,.94); }
