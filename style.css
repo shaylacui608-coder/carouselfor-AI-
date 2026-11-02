@@ -11,7 +11,8 @@ button { border: 0; padding: 0; font: inherit; cursor: pointer; -webkit-tap-high
 .modal-space { width: 375px; height: 571px; position: relative; }
 .modal {
   position: relative; width: 375px; height: 571px; overflow: hidden;
-  border-radius: 12px 12px 0 0;
+  border: 0;
+  border-radius: 0;
   background-color: #F5F6F9;
   background-image: url("assets/modal-background-layer.png");
   background-position: center;
