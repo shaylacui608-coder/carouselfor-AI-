@@ -33,6 +33,9 @@ button { border: 0; padding: 0; font: inherit; cursor: pointer; -webkit-tap-high
 .scene img { position: absolute; inset: 0; display: block; width: 319px; height: 240.68px; object-fit: fill; user-select: none; pointer-events: none; }
 .scene .after { clip-path: inset(0 0 0 var(--split)); }
 .divider { position: absolute; z-index: 1; left: var(--split); top: 0; bottom: 0; width: 1.5px; transform: translateX(-.75px); background: linear-gradient(180deg, #eff7fb, #b9d8e9 65%, #dbe9f4); box-shadow: 0 0 1px rgba(121,172,201,.1); pointer-events: none; }
+.carousel-pagination { position: absolute; z-index: 2; top: 298px; left: 0; right: 0; height: 6px; display: flex; justify-content: center; align-items: center; gap: 8px; }
+.carousel-pagination span { display: block; flex: 0 0 6px; width: 6px; height: 6px; border-radius: 50%; background: #E9ECF5; }
+.carousel-pagination span.is-active { flex-basis: 12px; width: 12px; border-radius: 3px; background: #D8DDEB; }
 h1 { position: absolute; left: 24px; top: 328px; margin: 0; font-size: 28px; line-height: 44px; font-weight: 600; letter-spacing: 0; white-space: nowrap; }
 h1 span { color: #0088ff; }
 p { position: absolute; left: 24px; top: 424px; margin: 0; font-size: 14px; font-weight: 400; line-height: 21px; color: #96999e; white-space: nowrap; }
